@@ -1,0 +1,17 @@
+= K8s YAML Configuration File
+
+=== deployment, service config 파일 적용 후
+
+service가 pod에 잘 맵핑 되었는지 확인.
+
+[source,bash]
+----
+kubectl get pod -o wide
+----
+
+`status` 부분 확인을 위해 내용을 yaml 파일로 저장하여 확인.
+
+[source,bash]
+----
+kubectl get deployment nginx-deployment -o yaml > nginx-deployment-result.yaml
+----
